@@ -14,7 +14,7 @@ source:
     - patches/fix-so-import-for-osx.patch
 
 build:
-  number: 4
+  number: 5
   skip:
     - win
     # https://github.com/conda-forge/root-feedstock/issues/327

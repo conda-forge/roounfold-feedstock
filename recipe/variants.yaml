@@ -1,9 +1,27 @@
+c_stdlib_version:
+  - if: osx
+    then: "11.0"
 c_compiler_version:
   - if: linux
     then: "13"
+  - if: osx
+    then: "18"
+  - if: osx
+    then: "16"
 cxx_compiler_version:
   - if: linux
     then: "13"
+  - if: osx
+    then: "18"
+  - if: osx
+    then: "16"
+# this is needed to make the rerender happy
+# see https://conda-forge.zulipchat.com/#narrow/channel/457337-general/topic/could.20we.20somehow.20have.20zip_keys.20broadcast.20unit-length.20values.3F/with/562873743
+fortran_compiler_version:
+  - if: osx
+    then: "14"
+  - if: osx
+    then: "14"
 root_base:
   - "6.32.10"
   - "6.34.10"

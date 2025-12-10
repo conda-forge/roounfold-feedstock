@@ -11,9 +11,10 @@ source:
   sha256: 14d83344c8f361e0738fb99af0dd1291db05fefc9b763b8749402235be3d755c
   patches:
     - patches/cmake-minimum-3.5.patch
+    - patches/fix-so-import-for-osx.patch
 
 build:
-  number: 3
+  number: 4
   skip:
     - win
     # https://github.com/conda-forge/root-feedstock/issues/327

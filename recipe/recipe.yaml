@@ -14,12 +14,9 @@ source:
     - patches/fix-so-import-for-osx.patch
 
 build:
-  number: 4
+  number: 5
   skip:
     - win
-    # https://github.com/conda-forge/root-feedstock/issues/327
-    - if: linux and (root_base is startingwith('6.32') or root_base is startingwith('6.34')) and (c_compiler_version != "13")
-      then: true
   script:
     - cmake ${CMAKE_ARGS}  -S . -B build
     - cmake --build build --clean-first --parallel="${CPU_COUNT}"
@@ -48,6 +45,7 @@ requirements:
         - cross-python_${{ target_platform }}
         - python
         - root_base
+        - root_cxx_standard
   host:
     - root_base
     - python

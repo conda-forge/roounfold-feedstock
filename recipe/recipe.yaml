@@ -14,7 +14,7 @@ source:
     - patches/fix-so-import-for-osx.patch
 
 build:
-  number: 6
+  number: 7
   skip:
     - win
   script:

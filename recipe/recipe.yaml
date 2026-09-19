@@ -15,7 +15,7 @@ source:
     - patches/fix-aarch64-createhist-symbol.patch
 
 build:
-  number: 9
+  number: 10
   skip:
     - win
   script:

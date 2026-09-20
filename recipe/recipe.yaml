@@ -10,6 +10,9 @@ source:
   url: https://gitlab.cern.ch/RooUnfold/RooUnfold/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
   sha256: 14d83344c8f361e0738fb99af0dd1291db05fefc9b763b8749402235be3d755c
   patches:
+    # ROOT 6.40 folded libRooFitJSONInterface into libRooFitHS3. Not yet sent
+    # upstream.
+    - patches/use-roofiths3-component.patch
     - patches/fix-so-import-for-osx.patch
     - patches/fix-aarch64-createhist-symbol.patch
 
